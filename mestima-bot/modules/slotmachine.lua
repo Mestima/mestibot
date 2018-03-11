@@ -56,7 +56,7 @@ function slot:GoA(msg)
 	msg:reply(string.format(text,game.res[1],game.res[2],game.res[3],game.res[4],game.res[5],game.res[6],game.res[7],game.res[8],game.res[9]))
 	
 	if game.res[4] == game.res[5] and game.res[5] == game.res[6] then game.won = game.money*10 msg:reply(string.format(slot.win,tostring(game.money*10),tostring(game.money*10)))
-	elseif game.res[4] == game.res[5] or game.res[5] == game.res[6] or game.res[4] == game.res[6] then game.won = game.money*10/2 msg:reply(string.format(slot.win,tostring(game.money*10/2),tostring(game.money*10/2)))
+	elseif game.res[4] == game.res[6] then game.won = game.money*10/2 msg:reply(string.format(slot.win,tostring(game.money*10/2),tostring(game.money*10/2)))
 	else game.won = -game.money msg:reply(string.format(slot.loose,game.money,game.money)) end
 	
 	eco:AddMoneySilent(game.ply.id,game.won)
@@ -85,7 +85,7 @@ function slot:GoB(msg)
 	msg:reply(string.format(text,game.res[1],game.res[2],game.res[3],game.res[4],game.res[5],game.res[6],game.res[7],game.res[8],game.res[9]))
 	
 	if game.res[4] == game.res[5] and game.res[5] == game.res[6] then game.won = game.money*10 msg:reply(string.format(slot.win,tostring(game.money*10),tostring(game.money*10)))
-	elseif game.res[4] == game.res[5] or game.res[5] == game.res[6] or game.res[4] == game.res[6] then game.won = game.money*10/2 msg:reply(string.format(slot.win,tostring(game.money*10/2),tostring(game.money*10/2)))
+	elseif game.res[4] == game.res[6] then game.won = game.money*10/2 msg:reply(string.format(slot.win,tostring(game.money*10/2),tostring(game.money*10/2)))
 	else game.won = -game.money msg:reply(string.format(slot.loose,game.money,game.money)) end
 	
 	eco:AddMoneySilent(game.ply.id,game.won)
@@ -114,7 +114,7 @@ function slot:GoC(msg)
 	msg:reply(string.format(text,game.res[1],game.res[2],game.res[3],game.res[4],game.res[5],game.res[6],game.res[7],game.res[8],game.res[9]))
 	
 	if game.res[4] == game.res[5] and game.res[5] == game.res[6] then game.won = game.money*10 msg:reply(string.format(slot.win,tostring(game.money*10),tostring(game.money*10)))
-	elseif game.res[4] == game.res[5] or game.res[5] == game.res[6] or game.res[4] == game.res[6] then game.won = game.money*10/2 msg:reply(string.format(slot.win,tostring(game.money*10/2),tostring(game.money*10/2)))
+	elseif game.res[4] == game.res[6] then game.won = game.money*10/2 msg:reply(string.format(slot.win,tostring(game.money*10/2),tostring(game.money*10/2)))
 	else game.won = -game.money msg:reply(string.format(slot.loose,game.money,game.money)) end
 	
 	eco:AddMoneySilent(game.ply.id,game.won)
