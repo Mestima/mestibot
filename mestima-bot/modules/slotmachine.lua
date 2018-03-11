@@ -1,6 +1,6 @@
 --[[
 	I hope it will work fine.
-	This class is additional class to economy class.
+	This class is an additional class to economy class.
 	I'll rewrite this class in future, because it's full of shit.
 ]]
 
@@ -46,9 +46,9 @@ function slot:GoA(msg)
 	local text = [[
 [  :slot_machine: | SLOTS ]
 ------------------
-%s : %s : %s
-%s : %s : %s
-%s : %s : %s
+%s  : %s :  %s
+%s  : %s :  %s   <
+%s  : %s :  %s
 ------------------
 | :  :  : : : : : : :  :  : |
 ]]
@@ -75,9 +75,9 @@ function slot:GoB(msg)
 	local text = [[
 [  :slot_machine: | SLOTS ]
 ------------------
-%s : %s : %s
-%s : %s : %s
-%s : %s : %s
+%s  : %s :  %s
+%s  : %s :  %s   <
+%s  : %s :  %s
 ------------------
 | :  :  : : : : : : :  :  : |
 ]]
@@ -104,9 +104,9 @@ function slot:GoC(msg)
 	local text = [[
 [  :slot_machine: | SLOTS ]
 ------------------
-%s : %s : %s
-%s : %s : %s
-%s : %s : %s
+%s  : %s :  %s
+%s  : %s :  %s   <
+%s  : %s :  %s
 ------------------
 | :  :  : : : : : : :  :  : |
 ]]
