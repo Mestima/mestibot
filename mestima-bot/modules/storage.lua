@@ -4,6 +4,10 @@
 
 local storage = {}
 
+storage.admins = { 
+	{"Admin","000000000000000000"},
+}
+
 storage.mestima = [[```Markdown
 # COPYRIGHT:
 - [ENG] This bot created by Mestima.
