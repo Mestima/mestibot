@@ -25,5 +25,6 @@ class.party		= require("./party.lua")
 class.mafia		= require("./mafia.lua")
 class.eco		= require("./economy.lua")
 class.slot		= require("./slotmachine.lua")
+class.hook		= require("./hooks.lua")
 
 return class
