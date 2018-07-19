@@ -144,38 +144,16 @@ function eco:TopTen(msg)
 	self:AddMe(msg)
 	local jmoney = file.Read("./mestima-bot/db/economy.txt")
 	local money = json:decode(jmoney)
-	local top = {}
-	local firstply = ""
-	local zero = 0
-	local new = 0
-	local top2 = "```MONEY TOP:"
-	for k,v in pairs(money) do
-		if zero < tonumber(v[2]) then zero = tonumber(v[2]) firstply = v[1] end
+	local sorted_money = mlib.table.sortByIndex(money,2)
+	i = 10
+	local top = "```Markdown\n"
+	while i > 4 do
+		top = top.. "> " .. 11-i .. "." .. tostring(msg.client:getUser(tostring(sorted_money[i][1])).username) .." - "..sorted_money[i][2].."\n"
+		i = i-1
 	end
-	top[1] = {msg.client:getUser(firstply),zero}
-	for i=2,10 do
-		top[i] = {}
-		top[i][2] = 0
-	end
-	new = zero
-	for i=2,10 do
-		for k,v in pairs(money) do
-			if top[i][2] < new and tonumber(v[2]) < new and top[i][2] < tonumber(v[2]) then top[i][2] = tonumber(v[2]) top[i][1] = msg.client:getUser(v[1]) end
-		end
-	end
+	top = top.."\n```"
 	
-	for i=1,10 do
-		if top[i] then
-			if top[i][1] and top[i][2] then
-				if top[i][1].username then
-					if i > 1 then if top[i-1][1] == top[i][1] then break end end
-					top2 = top2.."\n"..top[i][1].username.." - "..top[i][2].." bits"
-				end
-			end
-		end
-	end
-	top2 = top2.."\n```"
-	msg:reply(top2)
+	msg:reply(top)
 end
 
 function eco:ShowMyMoney(msg)

@@ -4,8 +4,8 @@
 
 local storage = {}
 
-storage.admins = { 
-	{"Admin","000000000000000000"},
+storage.admins = {
+	{"Admin Name Here","000000000000000000"},
 }
 
 storage.mestima = [[```Markdown
@@ -43,10 +43,10 @@ storage.news = {
 	eng = {},
 }
 storage.news.rus.messageoftheday = [[
-Новость дня: Удалена команда !e621 из-за запрета e621.net на территории физической локации хостинга.
+Новость дня: Команда !top была переработана.
 ]]
 storage.news.eng.messageoftheday = [[
-Message of the day: !e621 command was deleted cause e621.net was blocked in the physical hosting location.
+Message of the day: !top command has been fixed.
 ]]
 
 storage.help = {
@@ -67,6 +67,7 @@ storage.help.rus.main = [[
 !invitebot -- Получить ссылку для приглашения бота на Ваш сервер
 !discord -- Получить приглашение на сервер MestiBot Discord
 !copyright -- Показывает авторский копирайт
+!id -- Показывает Ваш discord id
 ]]
 storage.help.rus.eco = [[
 !money -- Посмотреть количество битс (денег) на Вашем счету
@@ -74,7 +75,7 @@ storage.help.rus.eco = [[
 !slot B -- Играть в игровой автомат (ставка 100 bits)
 !slot C -- Играть в игровой автомат (ставка 1000 bits)
 !freemoney -- Получить 150 битс бесплатно (это будет работать, только если у Вас менее 100 битс)
-!top -- Топ 10 богачей
+!top -- Топ 6 богачей
 ]]
 storage.help.rus.rp = [[
 !say текст -- Попросить Бота сказать какое-то слово или фразу
@@ -136,6 +137,7 @@ storage.help.eng.main = [[
 !invitebot -- Get a link to invite bot on your server
 !discord -- Get invite link to MestiBot Discord server
 !copytight -- Shows author's copyright
+!id -- Shows your discord id
 ]]
 storage.help.eng.eco = [[
 !money -- show your bits (money) ammount
@@ -143,7 +145,7 @@ storage.help.eng.eco = [[
 !slot B -- play slot machine (bet: 100 bits)
 !slot C -- play slot machine (bet: 1000 bits)
 !freemoney -- get 150 bits for free (it works if you have less than 100 bits only)
-!top -- Top 10 of rich mans
+!top -- Top 6 of rich mans
 ]]
 storage.help.eng.rp = [[
 !say text -- Bot will say text

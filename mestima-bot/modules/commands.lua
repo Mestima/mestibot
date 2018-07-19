@@ -4,6 +4,7 @@
 
 local storage	= require("./storage.lua")
 local class		= require("./classes.lua")
+local timer		= require("timer")
 
 local commands = {}
 
@@ -49,7 +50,8 @@ commands.main = {
 	{"slot b", function(msg) class.slot:GoB(msg) end,7},
 	{"slot c", function(msg) class.slot:GoC(msg) end,7},
 	{"freemoney", function(msg) class.eco:AddMeFreeMoney(msg) end,10},
-	{"top", function(msg) class.eco:TopTen(msg) end,4}
+	{"id", function(msg) msg:reply("``` "..msg.author.id.." ```") end,3},
+	{"top", function(msg) class.eco:TopTen(msg) end,4},
 }
 
 commands.lite = {

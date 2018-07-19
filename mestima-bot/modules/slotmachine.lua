@@ -47,7 +47,9 @@ function slot:GoA(msg)
 [  :slot_machine: | SLOTS ]
 ------------------
 %s  : %s :  %s
+
 %s  : %s :  %s   <
+
 %s  : %s :  %s
 ------------------
 | :  :  : : : : : : :  :  : |
@@ -76,7 +78,9 @@ function slot:GoB(msg)
 [  :slot_machine: | SLOTS ]
 ------------------
 %s  : %s :  %s
+
 %s  : %s :  %s   <
+
 %s  : %s :  %s
 ------------------
 | :  :  : : : : : : :  :  : |
@@ -105,7 +109,9 @@ function slot:GoC(msg)
 [  :slot_machine: | SLOTS ]
 ------------------
 %s  : %s :  %s
+
 %s  : %s :  %s   <
+
 %s  : %s :  %s
 ------------------
 | :  :  : : : : : : :  :  : |

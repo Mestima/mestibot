@@ -1,7 +1,3 @@
---[[
-	Yeah.. I should make it better. But not now.
-]]
-
 local json = require("./JSON.lua")
 local file = require("./file.lua")
 local emb  = require("./embed.lua")
@@ -28,7 +24,7 @@ function admin.isAuthorAdmin(id,admins)
 	end
 	return false
 end
-
+-- SendCustom(msg,title,color,content,fiel,footertext,footericon,timestamp)
 function admin.isBanned(id)
 	local f = file.Read("./mestima-bot/db/bans.txt")
 	local bans = json:decode(f)

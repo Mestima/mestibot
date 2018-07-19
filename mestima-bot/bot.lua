@@ -1,4 +1,5 @@
 local ds = require("discordia")
+local MySQL = require("./modules/mysql/mysql.lua")
 local class = require("./modules/classes.lua")
 local storage = require("./modules/storage.lua")
 local commands = require("./modules/commands.lua")
@@ -8,9 +9,8 @@ local cl = ds.Client({
 ds.extensions()
 ---------------------------------------------[[ CONFIG ZONE ]]-----------------------------------------------
 prefix = "!"
-token = "token here"
+token = "TOKEN HERE"
 -------------------------------------------------------------------------------------------------------------
-
 function reload()
 	-- i will realize it
 end
@@ -26,6 +26,7 @@ for k,v in pairs(commands.main) do class.sp:banCommand(v[1]) end
 
 cl:on("messageCreate", function(msg)
 	if msg.author == msg.client.user then return end -- Disable shitty posting
+	if msg.author.bot == true then return end -- Disable shitty posting x2
 	if not msg.guild then msg:reply(storage.cantprivate) return end -- block private bot dialogue
 	if msg.guild.id == "383843756547375104" then return end -- idk this guild, but some kids trying to crash bot
 	if class.admin.isBanned(msg.author.id) then return end -- Is user banned?
@@ -45,7 +46,7 @@ cl:on("messageCreate", function(msg)
 	end
 	
 	class.sp:init(msg)
-	class.sp:initBanCommands()
+	class.sp:initBanCommands()	
 end)
 
 cl:run("Bot "..token)
