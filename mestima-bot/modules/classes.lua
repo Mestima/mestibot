@@ -1,5 +1,5 @@
 --[[
-	Loading of all classes
+	Loading of all classes.
 ]]
 
 local class = {}
