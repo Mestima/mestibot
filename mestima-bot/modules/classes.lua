@@ -26,5 +26,6 @@ class.mafia		= require("./mafia.lua")
 class.eco		= require("./economy.lua")
 class.slot		= require("./slotmachine.lua")
 class.hook		= require("./hooks.lua")
+class.prefix	= require("./prefix.lua")
 
 return class

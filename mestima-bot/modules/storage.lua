@@ -2,10 +2,18 @@
 	Main MestiBot Storage
 ]]
 
+local file = require("./file.lua")
+local json = require("./JSON.lua")
+local mlib = require("./mlib.lua")
+
 local storage = {}
 
+storage.prefixes = json:decode(file.Read("./mestima-bot/db/prefixes.txt"))
+
 storage.admins = {
-	{"Admin Name Here","000000000000000000"},
+	{"Doktan","249553803945312257"},
+	{"Moriarty","302482207921012748"},
+	{"IO","368502257236312084"},
 }
 
 storage.mestima = [[```Markdown
@@ -107,6 +115,7 @@ storage.help.rus.fun = [[
 !party имя -- Поздравить пользователя с Днем Рождения! (функция доступна только на русском языке)
 ]]
 storage.help.rus.programming = [[
+!prefix -- Изменить префикс бота
 !if -- Создать свою команду для Бота. Команды создаются по шаблону ниже:
 		> !if ваша команда без ! then ответ, который должен выдать Бот
 	Пример: !if hello then world
@@ -175,6 +184,7 @@ storage.help.eng.fun = [[
 !dog -- Get a random dog photo
 ]]
 storage.help.eng.programming = [[
+!prefix -- Change bot prefix
 !if -- Allows you to create your own command for bot. You can create your command by using this template:
 		> !if your command without ! then bot's answer
 	Example: !if hello then world

@@ -9,7 +9,7 @@ local cl = ds.Client({
 ds.extensions()
 ---------------------------------------------[[ CONFIG ZONE ]]-----------------------------------------------
 prefix = "!"
-token = "TOKEN HERE"
+token = "Mzk4NTg0MDgyODcyOTI2MjE5.DTArMQ.1iUTE0iEnjkFJY8kvG34ChMi8H4"
 -------------------------------------------------------------------------------------------------------------
 function reload()
 	-- i will realize it
@@ -25,6 +25,8 @@ for k,v in pairs(commands.lite) do class.sp:banCommand(v[1]) end -- the part of 
 for k,v in pairs(commands.main) do class.sp:banCommand(v[1]) end
 
 cl:on("messageCreate", function(msg)
+	local special_prefix = class.prefix:getPrefix(msg, storage.prefixes)
+
 	if msg.author == msg.client.user then return end -- Disable shitty posting
 	if msg.author.bot == true then return end -- Disable shitty posting x2
 	if not msg.guild then msg:reply(storage.cantprivate) return end -- block private bot dialogue
@@ -33,13 +35,13 @@ cl:on("messageCreate", function(msg)
 --	if string.sub(msg.content,1,1) == prefix then class.log:Send(msg) end -- command log, I need it cause some kids was trying to crash bot
 	
 	for k,v in pairs(commands.lite) do
-		if string.lower(msg.content) == prefix..v[1] then
+		if (string.lower(msg.content) == prefix..v[1]) or (string.lower(msg.content) == special_prefix..v[1]) then
 			msg.channel:send(v[2])
 		end
 	end
 	
 	for k,v in pairs(commands.main) do
-		if string.lower(string.sub(msg.content,1,v[3])) == prefix..v[1] then
+		if (string.lower(string.sub(msg.content,1,v[3])) == prefix..v[1]) or (string.lower(string.sub(msg.content,1,v[3])) == special_prefix..v[1]) then
 			local func = v[2]
 			func(msg)
 		end

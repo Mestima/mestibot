@@ -52,6 +52,7 @@ commands.main = {
 	{"freemoney", function(msg) class.eco:AddMeFreeMoney(msg) end,10},
 	{"id", function(msg) msg:reply("``` "..msg.author.id.." ```") end,3},
 	{"top", function(msg) class.eco:TopTen(msg) end,4},
+	{"prefix", function(msg) class.prefix:setPrefix(msg, storage.prefixes) end,7},
 }
 
 commands.lite = {
