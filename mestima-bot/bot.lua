@@ -9,7 +9,7 @@ local cl = ds.Client({
 ds.extensions()
 ---------------------------------------------[[ CONFIG ZONE ]]-----------------------------------------------
 prefix = "!"
-token = "Mzk4NTg0MDgyODcyOTI2MjE5.DTArMQ.1iUTE0iEnjkFJY8kvG34ChMi8H4"
+token = "prefix here"
 -------------------------------------------------------------------------------------------------------------
 function reload()
 	-- i will realize it
