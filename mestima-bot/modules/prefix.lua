@@ -4,7 +4,6 @@ local mlib = require("./mlib.lua")
 local admin = require("./admin.lua")
 
 local pr = {}
-
 pr.message = {}
 pr.message.shortstring = [[```Markdown
 # [ENG] The string is too short. Try to make the string longer.
