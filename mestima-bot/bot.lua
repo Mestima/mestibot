@@ -9,7 +9,7 @@ local cl = ds.Client({
 ds.extensions()
 ---------------------------------------------[[ CONFIG ZONE ]]-----------------------------------------------
 prefix = "!"
-token = "TOKEN HERE" -- your bot token here
+token = "TOKEN HERE" -- your bot token here.
 -------------------------------------------------------------------------------------------------------------
 function reload()
 	-- i will realize it
