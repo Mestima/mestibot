@@ -1,5 +1,5 @@
 --[[
-	All the commands are here.
+	All the commands are placed here.
 ]]
 
 local storage	= require("./storage.lua")
