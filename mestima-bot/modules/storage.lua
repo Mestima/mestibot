@@ -1,5 +1,5 @@
 --[[
-	Main MestiBot Storage
+	Main MestiBot Storage.
 ]]
 
 local file = require("./file.lua")
