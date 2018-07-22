@@ -25,8 +25,6 @@ for k,v in pairs(commands.lite) do class.sp:banCommand(v[1]) end -- the part of 
 for k,v in pairs(commands.main) do class.sp:banCommand(v[1]) end
 
 cl:on("messageCreate", function(msg)
-	local special_prefix = class.prefix:getPrefix(msg, storage.prefixes)
-
 	if msg.author == msg.client.user then return end -- Disable shitty posting
 	if msg.author.bot == true then return end -- Disable shitty posting x2
 	if not msg.guild then msg:reply(storage.cantprivate) return end -- block private bot dialogue
@@ -34,6 +32,8 @@ cl:on("messageCreate", function(msg)
 	if class.admin.isBanned(msg.author.id) then return end -- Is user banned?
 --	if string.sub(msg.content,1,1) == prefix then class.log:Send(msg) end -- command log, I need it cause some kids was trying to crash bot
 	
+	local special_prefix = class.prefix:getPrefix(msg, storage.prefixes)	
+		
 	for k,v in pairs(commands.lite) do
 		if (string.lower(msg.content) == prefix..v[1]) or (string.lower(msg.content) == special_prefix..v[1]) then
 			msg.channel:send(v[2])
